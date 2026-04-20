@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: inventoryservice
+
+server:
+  servlet:
+    context-path: /inventory
+  port: 8083
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: health, info
+    
+  datasource:
+    url: jdbc:postgresql://192.168.0.102:5432/authdb
+    username: postgres
+    password: nayak@rth1
+    driver-class-name: org.postgresql.Driver
